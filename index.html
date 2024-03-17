@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<title>SpokeSpice - spoke lights for bicycles</title>
+
+
+  <link rel="shortcut icon" href="https://spokespice.github.io/images/favicon.png" type="image/png"
+/>
+
+
+  <meta name="description" content="Spoke lights for bicycles"
+/>
+
+  <meta name="keywords" content="esp32, bicycle, light, animated"
+/>
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://spokespice.github.io/css/style.min.4814d2c1857f40274b8aad1d14182dfcc587123b16d6939aa11b4569d05d83f7.css" type="text/css" integrity="sha256-SBTSwYV/QCdLiq0dFBgt/MWHEjsW1pOaoRtFadBdg/c=" />
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="Spoke lights for bicycles" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://spokespice.github.io/" /><meta property="og:image" content="https://spokespice.github.io/images/cover-image.jpg"/><meta property="og:site_name" content="SpokeSpice" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://spokespice.github.io/images/cover-image.jpg"/>
+
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Spoke lights for bicycles"/>
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="Spoke lights for bicycles">
+
+<style>
+    #blog-logo {
+        width: 350px;
+        height: 207px;
+        max-height: none;
+        margin-bottom: 1.5rem;
+    }
+</style><body>
+
+
+
+
+
+
+
+<header id="site-head" class="withCenteredImage" style="background-image: url(images/x)">
+
+
+    <div class="vertical">
+
+        
+
+        <div id="site-head-content" class="inner">
+            <img id="blog-logo" alt="Logo" src="images/logo-text.png" />
+
+            
+              
+              <h2 class="blog-description">Spoke Lights for you and your bicycle</h2>
+            
+
+            
+              
+              
+
+              
+                
+                 <a class='btn site-menu' data-title-anchor='about' href='#about'>About</a>
+              
+            
+              
+              
+
+              
+                
+                 <a class='btn site-menu' data-title-anchor='hardware' href='#hardware'>Hardware</a>
+              
+            
+              
+              
+
+              
+                
+                 <a class='btn site-menu' data-title-anchor='software' href='#software'>Software</a>
+              
+            
+              
+              
+
+              
+                
+                 <a class='btn site-menu' data-title-anchor='artworks' href='#artworks'>Artworks</a>
+              
+            
+              
+              
+
+              
+                 <a class='btn site-menu' href='https://github.com/SpokeSpice'>GitHub&nbsp;<icon class="fa fa-external-link"></icon></a>
+              
+            
+            
+                
+                <a id='header-arrow' href="#about" aria-label="Go to first section"><i class="fa fa-angle-down"></i></a>
+            
+        </div>
+    </div>
+</header>
+
+<main class="content" role="main">
+    
+    <div class='fixed-nav'>
+        
+        
+        
+            
+            <a class='fn-item' item_index='1' href='#about'>About</a>
+            
+        
+            
+            <a class='fn-item' item_index='2' href='#hardware'>Hardware</a>
+            
+        
+            
+            <a class='fn-item' item_index='3' href='#software'>Software</a>
+            
+        
+            
+            <a class='fn-item' item_index='4' href='#artworks'>Artworks</a>
+            
+        
+            
+            <a class='fn-item' item_index='5' href='#contribute'>Contribute</a>
+            
+        
+        
+            
+            <a class='fn-item' item_index='6' href='/#site-head'>Return To Top</a>
+        
+    </div>
+
+    
+    
+        
+        
+        <div class='post-holder'>
+            <article id='about' class='post first '>
+                <header class="post-header">
+                    <h2 class="post-title">About</h2>
+                </header>
+                <section class="post-content">
+                    <p>SpokeSpice is an open hardware project that is comprised of a controller board and a number of arms.
+It can display patterns and animations on the spokes of a bicycle wheel.</p>
+<p>A magnet that is attached to the fork of the wheels is detected by the arms that swipe underneath it.
+This allows the system to synchronize the display with the rotation of the wheel.</p>
+
+                </section>
+            </article>
+            <div class='post-after light'></div>
+        </div>
+        
+    
+        
+        
+        <div class='post-holder dark'>
+            <article id='hardware' class='post  '>
+                <header class="post-header">
+                    <h2 class="post-title">Hardware</h2>
+                </header>
+                <section class="post-content">
+                    <p>All <a href="https://kicad-pcb.org/">KiCad</a> design files are available in the <a href="https://github.com/SpokeSpice/Hardware">GitHub repository</a>.</p>
+<h5 id="controller-board">Controller board</h5>
+<p><img src="images/controller-a-perspective.png" alt="Controller"></p>
+<p>The controller board is based on the ESP32 microcontroller and features a USB-C connector for programming and debugging.
+It features a battery holder for an 18650 Li-Ion cell, a 3.3V LDO regulator, an SD card slot and 4 connectors for the arms.</p>
+<p>Several mounting holes in the PCB allow it to be mounted in a variety of different spoke configurations.</p>
+<p>For the sake of simplicity, the controller board does not feature a battery charging circuit. The battery must be charged externally.</p>
+<p>There is also no voltage regulation for the LEDs. The LEDs are powered directly from the battery, which is a 3.7V cell.
+Consquently, there is also no reverse polarity protection to avoid the voltage drop and hence the energy loss.
+The battery must hence  be inserted with the correct polarity.</p>
+<h5 id="arms">Arms</h5>
+<p><img src="images/arm-a-perspective.png" alt="Arm"></p>
+<p>Arms are made to be attached to the spokes of a 28-inch bicycle wheel.</p>
+<p>Several mounting holes in the PCB allow them to be mounted in a variety of different spoke configurations.</p>
+<p>Each arm PCB features 32 WS2812B RGB LEDs and is connected to the controller board via a 4-pin cable.
+A second 4-pin cable can be used to daisy-chain a second arm on the other side of the wheel, which
+will then display the same content.</p>
+<p>A hall effect sensor is used to detect the speed of the wheel and to synchronize the display with the rotation.</p>
+<p>Please have a look at the <a href="https://github.com/SpokeSpice/Hardware">GitHub repository</a> for more information.</p>
+<h5 id="interested-in-building-your-own">Interested in building your own?</h5>
+<p>To build your own SpokeSpice, you will need to order the PCBs and the components from a PCB manufacturer and an electronics distributor, respectively.</p>
+<p>There is currently no kit available for purchase, but we are thinking about setting up a link to a service that will allow you to order the assembled PCBs.
+If you are interested in this, please let us know by opening an issue in the <a href="https://github.com/SpokeSpice/Hardware">GitHub repository</a>.</p>
+
+                </section>
+            </article>
+            <div class='post-after'></div>
+        </div>
+        
+    
+        
+        
+        <div class='post-holder'>
+            <article id='software' class='post  '>
+                <header class="post-header">
+                    <h2 class="post-title">Software</h2>
+                </header>
+                <section class="post-content">
+                    <p>The software is divided into two parts: the firmware running on the ESP32 microcontroller and
+an image processing script running on a computer.</p>
+<p>All the software is open-source and available on the <a href="https://github.com/SpokeSpice/Software">GitHub repository</a>.</p>
+<h5 id="image-pre-processing">Image pre-processing</h5>
+<p>To front-load the real-time processing on the ESP32, the images are pre-processed on a computer
+so that all the necessary data is available in a format that can be quickly read by the ESP32.</p>
+<p>For that matter, all images are converted to a radial format, where each column of the pixels
+prepresents an angle and each row represents the value of each LED pixel in that angle.</p>
+<p>For instance, the following image:</p>
+<p><img src="images/smiley.gif" alt="Original image"></p>
+<p>Is converted to the following radial image, which is then processed by the ESP32:</p>
+<p><img src="images/smiley.rgif" alt="Radial image"></p>
+<p>A python script is used to convert the images to this format. The script is available in the
+GitHub repository of the project.</p>
+<h5 id="firmware">Firmware</h5>
+<p>The firmware is written in C and is based on the <a href="https://idf.espressif.com/">ESP-IDF</a> framework.</p>
+<p>It has the following tasks:</p>
+<ul>
+<li>Receives interrupts from the hall effect sensors on the arms and calculates the speed of the wheel</li>
+<li>Based on the estimated speed, it calculates the position of the wheel</li>
+<li>Read pre-processed radial gifs from the SD card or SPIFFS and displays them on the arms when the wheel is spinning with at least a certain speed</li>
+<li>Diplays patterns on the arms, also when the wheel is not spinning</li>
+</ul>
+
+                </section>
+            </article>
+            <div class='post-after light'></div>
+        </div>
+        
+    
+        
+        
+        <div class='post-holder dark'>
+            <article id='artworks' class='post  '>
+                <header class="post-header">
+                    <h2 class="post-title">Artworks</h2>
+                </header>
+                <section class="post-content">
+                    <p>There is a collection of artworks in the <a href="https://github.com/SpokeSpice/Artworks">artworks repository</a>.</p>
+<p>Contributions are very welcome, please submit a PR to add your own artwork to the collection.</p>
+
+                </section>
+            </article>
+            <div class='post-after'></div>
+        </div>
+        
+    
+        
+        
+        <div class='post-holder'>
+            <article id='contribute' class='post  last'>
+                <header class="post-header">
+                    <h2 class="post-title">Contribute</h2>
+                </header>
+                <section class="post-content">
+                    <p>SpokeSpice is an open-source project and contributions are welcome.
+There are several ideas on how to extend the software, please refer to the <a href="https://github.com/SpokeSpice/Software">GitHub repository</a> for more information.</p>
+
+                </section>
+            </article>
+            <div class='post-after light'></div>
+        </div>
+        
+    
+</main>
+
+
+
+
+<footer class="site-footer">
+  <div class="inner">
+    
+
+    
+
+    
+      <section class="copyright">© Daniel Mack</section>
+    
+
+    
+      <section>
+        <a href="https://themes.gohugo.io/hugo-scroll/" target="_blank" rel="noopener">Hugo Scroll</a> template
+      </section>
+    
+
+    
+  </div>
+</footer>
+
+
+    
+
+    
+    
+    
+    
+    
+
+    <script src="https://spokespice.github.io/js/script.min.5e6c5e01e85fe2790c20d8151c482cec0c2b90a367f884ebd45ec7ff8b5b0f82.js" integrity="sha256-XmxeAehf4nkMINgVHEgs7AwrkKNn&#43;ITr1F7H/4tbD4I=" ></script>
+
+    
+    <script>cssVars();</script>
+
+    
+</body>
+</html>
